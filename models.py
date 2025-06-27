@@ -5,7 +5,7 @@ class HoaDon(Base):
     __tablename__ = "thong_tin_hoa_don"
 
     id = Column(Integer, primary_key=True, index=True)
-    thoi_gian = Column(String, nullable=True)
+    thoi_gian = Column(DateTime, nullable=True)
     nguoi_gui = Column(String, nullable=True)
     ten_khach = Column(String, nullable=True)
     so_dien_thoai = Column(String, nullable=True)
