@@ -1,8 +1,8 @@
 from pydantic import BaseModel
 from typing import Optional
-
+from datetime import datetime
 class HoaDonBase(BaseModel):
-    thoi_gian: Optional[str] = None
+    thoi_gian: Optional[datetime] = None
     nguoi_gui: Optional[str] = None
     ten_khach: Optional[str] = None
     so_dien_thoai: Optional[str] = None
