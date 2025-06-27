@@ -1,21 +1,10 @@
 version: "3.8"
-services:
 
+services:
   fastapi:
-    build: ./fastapi_backend
-    depends_on:
-      - db
-    environment:
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_USER=user
-      - DB_PASSWORD=password
-      - DB_NAME=hoa_don_db
+    build: .                # build từ Dockerfile ở thư mục hiện tại
     ports:
       - "8000:8000"
     volumes:
-      - ./fastapi_backend:/app
+      - .:/app              # mount mã nguồn để dùng --reload
     command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-
-volumes:
-  mysql_data: 
